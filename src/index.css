@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+@theme {
+    --color-bg-dark: #040D12;
+    --color-swampy-green: #183D3D;
+    --color-gray-green: #5C8374;
+    --color-text-green: #93B1A6;
+}
+
+:root {
+    background-color: #040d12;
+}

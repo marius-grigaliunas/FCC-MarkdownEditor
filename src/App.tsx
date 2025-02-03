@@ -13,7 +13,7 @@ export default function MarkdownPreviewer() {
         >
         <textarea
           id="editor"
-          className="w-full h-full resize-none p-5 text-black scrollbar-thin"
+          className="w-full h-full resize-none p-5 text-black scrollbar-"
           value={markdown}
           onChange={(e) => setMarkdown(e.target.value)}
         />

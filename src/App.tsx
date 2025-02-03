@@ -7,19 +7,25 @@ export default function MarkdownPreviewer() {
   const [markdown, setMarkdown] = useState(defaultMarkdown);
 
   return (
-    <div className="flex flex-col md:flex-row gap-4 p-4">
-      <textarea
-        id="editor"
-        className="w-full md:w-1/2 h-80 p-2 border rounded"
-        value={markdown}
-        onChange={(e) => setMarkdown(e.target.value)}
-      />
+    <div className="flex flex-col items-center gap-10 p-10 align-middle ">
+      <div 
+        className="w-3/4 max-w-3xl h-80 border flex"
+        >
+        <textarea
+          id="editor"
+          className="w-full h-full resize-none overflow-scroll p-5 "
+          value={markdown}
+          onChange={(e) => setMarkdown(e.target.value)}
+        />
+      </div>
       <div
         id="preview"
-        className="w-full md:w-1/2 h-80 p-2 border rounded overflow-auto bg-white"
-      />
-      <div>
-        <Markdown>
+        className="w-200 h-auto p-2 border rounded overflow-auto bg-white"
+      >
+        <Markdown
+          breaks={true}
+          gfm={true}
+        >
             {markdown}
         </Markdown>
       </div>
